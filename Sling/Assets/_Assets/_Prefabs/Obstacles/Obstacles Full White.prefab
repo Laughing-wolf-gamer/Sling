@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7667649422211606635}
   - component: {fileID: 396065898373157032}
   - component: {fileID: 2439978400002562701}
-  - component: {fileID: 2457658112699737907}
+  - component: {fileID: 1438224559550273914}
   m_Layer: 0
   m_Name: Normal (1)
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903580042179365009}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.482, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.70710677}
+  m_LocalPosition: {x: -0.56412053, y: -0.24099946, z: 0}
+  m_LocalScale: {x: 2.3407164, y: 2.3407164, z: 2.3407164}
   m_Children: []
   m_Father: {fileID: 6536341674275571322}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &396065898373157032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 290143881
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 84e99e72031c7f7478b5a1cf8d5b728d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,7 +113,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &2457658112699737907
+--- !u!114 &1438224559550273914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,11 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163cde48db665a642bc038c35274689c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 100
-  maxGravity: 0
+  lifeTime: 150
+  maxGravity: -10
   currentGravity: 0
   obstaclesType: 0
-  dOTweenAnimation: {fileID: 0}
+  dOTweenAnimation: {fileID: 2334835582530230229}
 --- !u!1 &5722824673930859154
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 6537296590813105284}
   - component: {fileID: 7909661986363733315}
   - component: {fileID: 5553122822262337346}
-  - component: {fileID: 4952598665280327390}
+  - component: {fileID: 19530666159966328}
   m_Layer: 0
   m_Name: Normal
   m_TagString: Untagged
@@ -156,13 +156,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5722824673930859154}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
+  m_LocalPosition: {x: 0.5641196, y: -0.24100041, z: 0}
+  m_LocalScale: {x: 2.3407164, y: 2.3407164, z: 2.3407164}
   m_Children: []
   m_Father: {fileID: 6536341674275571322}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &7909661986363733315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 290143881
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 84e99e72031c7f7478b5a1cf8d5b728d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -243,7 +243,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &4952598665280327390
+--- !u!114 &19530666159966328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,11 +255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163cde48db665a642bc038c35274689c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 100
-  maxGravity: 0
+  lifeTime: 150
+  maxGravity: -10
   currentGravity: 0
   obstaclesType: 0
-  dOTweenAnimation: {fileID: 0}
+  dOTweenAnimation: {fileID: 2334835582530230229}
 --- !u!1 &6536341674275571319
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,8 +270,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6536341674275571322}
   - component: {fileID: 6536341674275571316}
-  - component: {fileID: 964033807252981156}
-  - component: {fileID: 3007517078568166557}
+  - component: {fileID: 8525960328299272707}
+  - component: {fileID: 2334835582530230229}
   m_Layer: 0
   m_Name: Obstacles Full White
   m_TagString: Untagged
@@ -288,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 6536341674275571319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.19, y: -3.95, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6537296590813105284}
   - {fileID: 7667649422211606635}
@@ -316,7 +316,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &964033807252981156
+--- !u!114 &8525960328299272707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,8 +332,8 @@ MonoBehaviour:
   maxGravity: -10
   currentGravity: 0
   obstaclesType: 0
-  dOTweenAnimation: {fileID: 3007517078568166557}
---- !u!114 &3007517078568166557
+  dOTweenAnimation: {fileID: 2334835582530230229}
+--- !u!114 &2334835582530230229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,8 +379,8 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 1
-  easeType: 27
+  duration: 0.4
+  easeType: 30
   easeCurve:
     serializedVersion: 2
     m_Curve:

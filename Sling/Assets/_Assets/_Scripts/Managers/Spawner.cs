@@ -1,31 +1,69 @@
 using UnityEngine;
 using GamerWolf.Utils;
 using System.Collections;
-using System.Collections.Generic;
+
 public class Spawner : MonoBehaviour {
     
+
+    [Header("Camera")]
+    [SerializeField] private float minCamSize = 22f;
+    [SerializeField] private float maxCamSize = 200f;
+
+    [Header("Spawing")]
+    [SerializeField] private int maxBlackObsatableAmount;
+    [SerializeField] private int whiteObstacleAmount;
+    [SerializeField] private int powerUpAmount;
     [SerializeField] private float spawnrate;
-    [SerializeField] private int spawnAmount;
     [SerializeField] private float spawnRadius;
     [SerializeField] private Transform prefab;
 
     [SerializeField] private Transform player;
     [SerializeField] private PoolObjectTag[] randomTags;
+    [SerializeField] private PoolObjectTag[] powerUpTags;
+    [SerializeField] private int currentSpawnAmount;
+    private Camera cam;
+    private float currentFOv;
+    private void Start(){
+        cam = Camera.main;
+    }
+    private void Update(){
 
+        currentFOv = Vector2.Distance(transform.position,player.position);
+        currentFOv = Mathf.Clamp(currentFOv,minCamSize,maxCamSize);
+        cam.orthographicSize = currentFOv;
+    }
     public void StartSpawn(){
-        Spawn(false,PoolObjectTag.FullWhite);
+        currentSpawnAmount = whiteObstacleAmount;
+        Spawn(false,PoolObjectTag.FullWhite,currentSpawnAmount);
+        StartCoroutine(PowerUpSpawnRoutne());
         StartCoroutine(SpawningRoutine());
     }
     
     private IEnumerator SpawningRoutine(){
         yield return new WaitForSeconds(spawnrate);
         spawnRadius = Vector2.Distance(transform.position,player.position) + 5;
+        if(spawnRadius < 0.5f){
+            spawnRadius = 4f;
+        }
         int rand = Random.Range(0,randomTags.Length);
-        Spawn(true,randomTags[rand]);
+        if(randomTags[rand] == PoolObjectTag.Half_white){
+            currentSpawnAmount = maxBlackObsatableAmount;
+        
+        }else{
+            currentSpawnAmount = whiteObstacleAmount;
+        }
+        Spawn(true,randomTags[rand],currentSpawnAmount);
         yield return StartCoroutine(SpawningRoutine());
     }
+    private IEnumerator PowerUpSpawnRoutne(){
+        yield return new WaitForSeconds(10);
+        int rand = Random.Range(0,powerUpTags.Length);
+        int current = powerUpAmount;
+        Spawn(true,randomTags[rand],current);
+        yield return StartCoroutine(PowerUpSpawnRoutne());
+    }
     [ContextMenu("Spawn")]
-    public void Spawn(bool _Random,PoolObjectTag tag){
+    public void Spawn(bool _Random,PoolObjectTag tag,int spawnAmount){
         
         for (int i = 0; i < spawnAmount; i++){
             float angle = i * Mathf.PI * 2 / spawnAmount;

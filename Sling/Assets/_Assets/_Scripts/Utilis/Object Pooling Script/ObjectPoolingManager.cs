@@ -7,13 +7,19 @@ namespace GamerWolf.Utils{
     
     public enum PoolObjectTag {
         FullWhite,
-        Spikes,
         Half_white,
-
+        DarkSpikes,
 
         // Effects
         onPlayerCollidingEffect,
         onPowerUpPickUp,
+
+        // PowerUps
+        PowerUps_Shield,
+        PowerUps_WhiteSpike,
+        PowerUps_Heal,
+
+
     }
     public class ObjectPoolingManager : MonoBehaviour{
 

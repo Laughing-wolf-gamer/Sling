@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour {
 
     
@@ -44,12 +45,18 @@ public class GameHandler : MonoBehaviour {
             yield return null;
         }
         onGameEnd?.Invoke();
-
     }
 
 
     public void StartGame(){
         isGamePlaying = true;
         isGameEnd = false;
+    }
+    public void GameOver(){
+        isGamePlaying = false;
+        isGameEnd = true;
+    }
+    public void RestartGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

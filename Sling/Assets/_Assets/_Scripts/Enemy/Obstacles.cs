@@ -3,7 +3,7 @@ using GamerWolf.Utils;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
-public enum ObstaclesType{White,Dark}
+public enum ObstaclesType{White,Dark,WhiteSpikes,DarkSpikes}
 public class Obstacles : MonoBehaviour,IPooledObject{
 
     [SerializeField] private float lifeTime;     
@@ -24,7 +24,13 @@ public class Obstacles : MonoBehaviour,IPooledObject{
     public void DestroyMySelf(float delay = 0f){
         
         Invoke(nameof(DestroyWithDelay),delay);
-        rb2D.AddForce(new Vector2(Random.Range(-1,1),Random.Range(-1,1)));
+        if(obstaclesType != ObstaclesType.WhiteSpikes || obstaclesType != ObstaclesType.WhiteSpikes){
+            rb2D.AddForce(new Vector2(Random.Range(-1,1),Random.Range(-1,1)));
+        }else{
+            rb2D.AddForce(transform.right * 20f,ForceMode2D.Impulse);
+        }
+
+        
         
     }
     private void DestroyWithDelay(){
@@ -32,11 +38,16 @@ public class Obstacles : MonoBehaviour,IPooledObject{
     }
 
     public void OnObjectReuse(){
-        dOTweenAnimation.DOPlay();
+        if(dOTweenAnimation != null){
+            dOTweenAnimation.DOPlay();
+        }else{
+            gameObject.SetActive(true);
+        }
         DestroyMySelf(lifeTime);
     }
     public ObstaclesType GetObstaclesType(){
         return obstaclesType;
     }
+    
     
 }
