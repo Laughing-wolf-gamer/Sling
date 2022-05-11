@@ -12,8 +12,8 @@ public class Spawner : MonoBehaviour {
     [SerializeField] private Transform player;
     [SerializeField] private PoolObjectTag[] randomTags;
 
-    private void Start(){
-        Spawn(false,PoolObjectTag.Obstacles);
+    public void StartSpawn(){
+        Spawn(false,PoolObjectTag.FullWhite);
         StartCoroutine(SpawningRoutine());
     }
     

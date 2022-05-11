@@ -5,7 +5,16 @@ using System.Collections.Generic;
 namespace GamerWolf.Utils{
 
     
-    public enum PoolObjectTag{Obstacles,Spikes,Half_white}
+    public enum PoolObjectTag {
+        FullWhite,
+        Spikes,
+        Half_white,
+
+
+        // Effects
+        onPlayerCollidingEffect,
+        onPowerUpPickUp,
+    }
     public class ObjectPoolingManager : MonoBehaviour{
 
         #region Singelton.

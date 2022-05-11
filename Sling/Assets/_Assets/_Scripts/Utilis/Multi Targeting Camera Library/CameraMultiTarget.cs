@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace GamerWolf.Utils {
 	[DefaultExecutionOrder(-1)]
 	[ExecuteInEditMode]
-	[RequireComponent(typeof(Camera))]
+	// [RequireComponent(typeof(Camera))]
 	public class CameraMultiTarget : MonoBehaviour {
 		public float Pitch;
 		public float Yaw;
@@ -17,8 +17,8 @@ namespace GamerWolf.Utils {
 		public float PaddingDown;
 		public float MoveSmoothTime = 0.19f;
 
-		private Camera _camera;
-		public List<Transform> _targets = new List<Transform>();
+		[SerializeField] private Camera _camera;
+		[SerializeField] private List<Transform> _targets = new List<Transform>();
 		private DebugProjection _debugProjection;
 
 		enum DebugProjection { DISABLE, IDENTITY, ROTATED }
@@ -29,7 +29,7 @@ namespace GamerWolf.Utils {
 		
 		private void Awake(){
 			current = this;
-			_camera = gameObject.GetComponent<Camera>();
+			// _camera = GetComponent<Camera>();
 			_debugProjection = DebugProjection.ROTATED;
 		}
 		private void LateUpdate() {
