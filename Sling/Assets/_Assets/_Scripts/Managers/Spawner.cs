@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour {
     [SerializeField] private float maxCamSize = 200f;
 
     [Header("Spawing")]
+    [SerializeField] private LayerMask checkMask;
     [SerializeField] private int maxBlackObsatableAmount;
     [SerializeField] private int whiteObstacleAmount;
     [SerializeField] private int powerUpAmount;
@@ -18,8 +19,9 @@ public class Spawner : MonoBehaviour {
     [SerializeField] private Transform prefab;
 
     [SerializeField] private Transform player;
-    [SerializeField] private PoolObjectTag[] randomTags;
+    
     [SerializeField] private PoolObjectTag[] powerUpTags;
+    [SerializeField] private PoolObjectTag[] darkObstaclesTags;
     [SerializeField] private int currentSpawnAmount;
     private Camera cam;
     private float currentFOv;
@@ -34,9 +36,13 @@ public class Spawner : MonoBehaviour {
     }
     public void StartSpawn(){
         currentSpawnAmount = whiteObstacleAmount;
-        Spawn(false,PoolObjectTag.FullWhite,currentSpawnAmount);
+        Invoke(nameof(SpawnInitialLevel),1f);
+        StartCoroutine(SpawnObstacles());
         StartCoroutine(PowerUpSpawnRoutne());
         StartCoroutine(SpawningRoutine());
+    }
+    private void SpawnInitialLevel(){
+        Spawn(false,PoolObjectTag.FullWhite,currentSpawnAmount);
     }
     
     private IEnumerator SpawningRoutine(){
@@ -45,21 +51,25 @@ public class Spawner : MonoBehaviour {
         if(spawnRadius < 0.5f){
             spawnRadius = 4f;
         }
-        int rand = Random.Range(0,randomTags.Length);
-        if(randomTags[rand] == PoolObjectTag.Half_white){
-            currentSpawnAmount = maxBlackObsatableAmount;
         
-        }else{
-            currentSpawnAmount = whiteObstacleAmount;
-        }
-        Spawn(true,randomTags[rand],currentSpawnAmount);
+        currentSpawnAmount = whiteObstacleAmount;
+        Spawn(true,PoolObjectTag.FullWhite,currentSpawnAmount);
         yield return StartCoroutine(SpawningRoutine());
+    }
+    private IEnumerator SpawnObstacles(){
+        yield return new WaitForSeconds(8);
+        int rand = Random.Range(0,darkObstaclesTags.Length);
+        Debug.Log("Spwaning " + darkObstaclesTags[rand]);
+        Spawn(true,darkObstaclesTags[rand],maxBlackObsatableAmount);
+        yield return StartCoroutine(SpawnObstacles());
     }
     private IEnumerator PowerUpSpawnRoutne(){
         yield return new WaitForSeconds(10);
+        Debug.Log("Spwaning Power Ups");;
         int rand = Random.Range(0,powerUpTags.Length);
         int current = powerUpAmount;
-        Spawn(true,randomTags[rand],current);
+        Debug.Log("Spwaning " + powerUpTags[rand]);
+        Spawn(true,powerUpTags[rand],current);
         yield return StartCoroutine(PowerUpSpawnRoutne());
     }
     [ContextMenu("Spawn")]
@@ -75,9 +85,21 @@ public class Spawner : MonoBehaviour {
             }else{
                 pos += new Vector2(x,y);
             }
+            RaycastHit2D coli = Physics2D.CircleCast(pos,0.8f,Vector2.zero,0f,checkMask);
+            if(coli.collider != null){
+                if(coli.transform.GetComponent<Obstacles>() != null){
+                    coli.transform.gameObject.SetActive(false);
+                }
+            }
             float angleDegree = angle * Mathf.Rad2Deg;
             Quaternion rot = Quaternion.Euler(0f,0f,angleDegree);
-            ObjectPoolingManager.current.SpawnFromPool(tag,pos,rot);
+            if(tag == PoolObjectTag.DarkSpikes){
+                ObjectPoolingManager.current.SpawnFromPool(tag,Vector3.zero,rot);
+            }else{
+                ObjectPoolingManager.current.SpawnFromPool(tag,pos,rot);
+
+            }
+            
         }
     }
 }

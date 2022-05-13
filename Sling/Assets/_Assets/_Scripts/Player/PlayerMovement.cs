@@ -14,13 +14,17 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Power Up")]
     [SerializeField] private float maxHealingTime;
     [SerializeField] private float maxSheildActiveTime;
+    
     [SerializeField] private GameObject shieldPowerUpObject;
+    [SerializeField] private Collider2D centerColi;
     private GravityAttractor attractor;
     private Rigidbody2D rb2D;
     private GravityBody body;
     private PlayerInput playerInput;
     private bool igonrCollsion;
     private bool canHeal,canSheild,canShootSpike;
+    private float currentFlightTime;
+    private bool canReduceDrag;
     
     private void Awake(){
         playerInput = GetComponent<PlayerInput>();
@@ -29,10 +33,10 @@ public class PlayerMovement : MonoBehaviour {
     }
     private void Start(){
         attractor = GravityAttractor.attractorInstance;
+        canReduceDrag = true;
         currentDrag = normalDrag;
         
     }
-    private float currentFlightTime;
     private void Update(){
         
         if(playerInput.InputAvailable()){
@@ -55,9 +59,13 @@ public class PlayerMovement : MonoBehaviour {
             
             if(currentDrag <= 0f){
                 currentDrag = 0f;
-                // animationHandler.Squicing(false);
+                canReduceDrag = false;
+                rb2D.AddForce(-transform.up * 2f,ForceMode2D.Force);
             }else{
-                currentDrag -= Time.deltaTime;
+                if(canReduceDrag){
+                    currentDrag -= 0.01f;
+                    
+                }
             }
 
             rb2D.drag = currentDrag;
@@ -70,6 +78,14 @@ public class PlayerMovement : MonoBehaviour {
         lr.SetPosition(0,transform.position);
         lr.SetPosition(1,attractor.transform.position);
     }
+    public void FirstShoot(){
+        ShowLine();
+        rb2D.AddForce(transform.up * 90f,ForceMode2D.Impulse);
+        Invoke(nameof(ActivateCentercollider),1f);
+    }
+    private void ActivateCentercollider(){
+        centerColi.enabled = true;
+    }
     private void OnTriggerEnter2D(Collider2D coli){
         
         if(coli.transform.TryGetComponent<Obstacles>(out Obstacles body)){
@@ -78,6 +94,8 @@ public class PlayerMovement : MonoBehaviour {
                     return;
                 }
                 currentFlightTime = 2f;
+                CancelInvoke(nameof(ActivateDrag));
+                Invoke(nameof(ActivateDrag),0.7f);
                 GameObject effectObject = ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.onPlayerCollidingEffect,coli.transform.position,Quaternion.identity);
                 animationHandler.Squicing(true);
                 if(effectObject.TryGetComponent<ParticleSystem>(out ParticleSystem effect)){
@@ -87,9 +105,11 @@ public class PlayerMovement : MonoBehaviour {
                 igonrCollsion = true;
                 body.transform.parent.gameObject.SetActive(false);
                 currentDrag = normalDrag;
+                rb2D.velocity = Vector2.zero;
                 rb2D.AddForce(transform.up * upForce,ForceMode2D.Impulse);
+                GameHandler.current.IncresaseScore();
                 Invoke(nameof(ResetCollison),0.1f);
-            }else{
+            }else if(body.GetObstaclesType() == ObstaclesType.Dark){
                 if(!canHeal){
                     GameHandler.current.GameOver();
                     gameObject.SetActive(false);
@@ -128,6 +148,9 @@ public class PlayerMovement : MonoBehaviour {
         canSheild = false;
         shieldPowerUpObject.SetActive(canSheild);
     }
+    public void UseExtraJump(){
+        rb2D.AddForce(transform.up * upForce * 2,ForceMode2D.Impulse);
+    }
     public void AttackSpikePowerUp(){
         // attack with white spikes which kills the dark obstacles.
         SpawnSpike(5,PoolObjectTag.PowerUps_WhiteSpike);
@@ -144,5 +167,10 @@ public class PlayerMovement : MonoBehaviour {
             Quaternion rot = Quaternion.Euler(0f,0f,angleDegree);
             ObjectPoolingManager.current.SpawnFromPool(tag,pos,rot);
         }
+    }
+    private void ActivateDrag(){
+        canReduceDrag = true;
+        rb2D.AddForce(-transform.up * 20f,ForceMode2D.Impulse);
+        GameHandler.current.CheckForFurthestLeap();
     }
 }

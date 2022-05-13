@@ -18,6 +18,8 @@ namespace GamerWolf.Utils{
         PowerUps_Shield,
         PowerUps_WhiteSpike,
         PowerUps_Heal,
+        // Others
+        ScorePopUp,
 
 
     }

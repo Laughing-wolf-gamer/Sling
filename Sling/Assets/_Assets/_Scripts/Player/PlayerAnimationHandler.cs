@@ -3,10 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerAnimationHandler : MonoBehaviour {
-    
-    
-    [SerializeField] private Transform gfx;
-    [SerializeField] private Transform eyes;
     private Animator animator;
 
 

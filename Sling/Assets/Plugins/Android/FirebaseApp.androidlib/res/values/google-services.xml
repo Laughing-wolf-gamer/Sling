@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">384521320879</string>
+  <string name="google_storage_bucket" translatable="false">sling-9a6a1.appspot.com</string>
+  <string name="project_id" translatable="false">sling-9a6a1</string>
+  <string name="google_api_key" translatable="false">AIzaSyAnKnXZVMkvtFyiiNwSK6Xq3qAmoSzf7KQ</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAnKnXZVMkvtFyiiNwSK6Xq3qAmoSzf7KQ</string>
+  <string name="google_app_id" translatable="false">1:384521320879:android:d93d888dc5f8a6f997175a</string>
+  <string name="default_web_client_id" translatable="false">384521320879-pdlcrd20bav7tonc2pvahsohpb4s5mcj.apps.googleusercontent.com</string>
+</resources>

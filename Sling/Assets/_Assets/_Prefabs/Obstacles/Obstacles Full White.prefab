@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 396065898373157032}
   - component: {fileID: 2439978400002562701}
   - component: {fileID: 1438224559550273914}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Normal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903580042179365009}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.70710677}
-  m_LocalPosition: {x: -0.56412053, y: -0.24099946, z: 0}
-  m_LocalScale: {x: 2.3407164, y: 2.3407164, z: 2.3407164}
+  m_LocalPosition: {x: -0.44529, y: -0.24099946, z: 0}
+  m_LocalScale: {x: 1.8476678, y: 1.8476678, z: 1.8476678}
   m_Children: []
   m_Father: {fileID: 6536341674275571322}
   m_RootOrder: 1
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 7909661986363733315}
   - component: {fileID: 5553122822262337346}
   - component: {fileID: 19530666159966328}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,8 +157,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5722824673930859154}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 0.5641196, y: -0.24100041, z: 0}
-  m_LocalScale: {x: 2.3407164, y: 2.3407164, z: 2.3407164}
+  m_LocalPosition: {x: 0.44529, y: -0.24100041, z: 0}
+  m_LocalScale: {x: 1.8476678, y: 1.8476678, z: 1.8476678}
   m_Children: []
   m_Father: {fileID: 6536341674275571322}
   m_RootOrder: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 6536341674275571316}
   - component: {fileID: 8525960328299272707}
   - component: {fileID: 2334835582530230229}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Obstacles Full White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 6536341674275571319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.19, y: -3.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
   - {fileID: 6537296590813105284}
   - {fileID: 7667649422211606635}

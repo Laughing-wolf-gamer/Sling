@@ -24,10 +24,10 @@ public class Obstacles : MonoBehaviour,IPooledObject{
     public void DestroyMySelf(float delay = 0f){
         
         Invoke(nameof(DestroyWithDelay),delay);
-        if(obstaclesType != ObstaclesType.WhiteSpikes || obstaclesType != ObstaclesType.WhiteSpikes){
-            rb2D.AddForce(new Vector2(Random.Range(-1,1),Random.Range(-1,1)));
-        }else{
+        if(obstaclesType == ObstaclesType.WhiteSpikes || obstaclesType == ObstaclesType.DarkSpikes){
             rb2D.AddForce(transform.right * 20f,ForceMode2D.Impulse);
+        }else{
+            rb2D.AddForce(new Vector2(Random.Range(-1,1),Random.Range(-1,1)));
         }
 
         

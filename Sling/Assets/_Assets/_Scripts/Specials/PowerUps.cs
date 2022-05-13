@@ -46,6 +46,9 @@ public class PowerUps : MonoBehaviour,IPooledObject {
                 case PowerUpType.Shield:
                     player.UseSheildPowerUp();
                 break;
+                case PowerUpType.ExtraJump:
+                    player.UseExtraJump();
+                break;
             }
             DestroyNow();
         }

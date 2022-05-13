@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1c074a0c075fb6c46b607c34003f9842
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Panipuri
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7078a9f22d0c7684a9c39eb6cc5ef6e9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
