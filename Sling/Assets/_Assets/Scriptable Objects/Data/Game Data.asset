@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Game Data
   m_EditorClassIdentifier: 
   gameSaveData:
+    lastHighScore: 0
     lastSurvivalTime: 0
-    lastFurthestLeap: 26.926147
+    lastFurthestLeap: 0
+    settingsData:
+      isMusicOn: 1
+      isSoundOn: 1
+      playConsoleLink: 

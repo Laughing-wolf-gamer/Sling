@@ -1262,6 +1262,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral2DBBA2185D30043A3BE051D980701C651801D22E
 IL2CPP_EXTERN_C String_t* _stringLiteral2DCA3D19A292B56842D15DE99EA62D834BB0AB61;
 IL2CPP_EXTERN_C String_t* _stringLiteral2E4478018420367A216024FE50537809489CC871;
 IL2CPP_EXTERN_C String_t* _stringLiteral306716C9D6B9595061CC04B314471DA1BEBAA9BE;
+IL2CPP_EXTERN_C String_t* _stringLiteral30CC41AF1B42DB6D883BC74C6F39AEC16E8649E4;
 IL2CPP_EXTERN_C String_t* _stringLiteral328B39ACA17B06ABB7B010FA8A2D12D44472BF2E;
 IL2CPP_EXTERN_C String_t* _stringLiteral340A4E6113B91F3053467C6C9DD290DCC19AB723;
 IL2CPP_EXTERN_C String_t* _stringLiteral34AD2CD185333C3FB83B337978B6493B9C5A8244;
@@ -3137,6 +3138,15 @@ public:
 
 // GooglePlayGames.BasicApi.Nearby.DummyNearbyConnectionClient
 struct DummyNearbyConnectionClient_t2ADA62640062D1EDBEAD1F92058F04BE8D042F3F  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+
+// GPGSIds
+struct GPGSIds_tE10CFDC26A18093DA76E02C1503D3AE38EEA425C  : public RuntimeObject
 {
 public:
 
@@ -25597,6 +25607,8 @@ inline void Action_1__ctor_m2A1B34C27CAE6ED7FD924E5F59C0A1ACBBF22C38 (Action_1_t
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsyncOperation_tB6913CEC83169F22E96067CE8C7117A221E51A86 * SceneManager_LoadSceneAsync_mAB22F675FE16C405CBEC2CEF405493DBB6F0284E (int32_t ___sceneBuildIndex0, const RuntimeMethod* method);
 // System.Void UnityEngine.Social::ReportProgress(System.String,System.Double,System.Action`1<System.Boolean>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Social_ReportProgress_m67AE3F5F86D136BC2CF125204F66F0952F3CE743 (String_t* ___achievementID0, double ___progress1, Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * ___callback2, const RuntimeMethod* method);
+// System.Void GooglePlayGames.PlayGamesPlatform::ShowLeaderboardUI(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayGamesPlatform_ShowLeaderboardUI_mA56C388685807248A823B6DA5221E947AFE75EFE (PlayGamesPlatform_t37CF2DD1D3AE9874E13AF34B1DFC4429A7BD975F * __this, String_t* ___leaderboardId0, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::AddComponent<GooglePlayGames.OurUtils.PlayGamesHelperObject>()
 inline PlayGamesHelperObject_t811D12CA4ECDC868E53C383130E35DA936056627 * GameObject_AddComponent_TisPlayGamesHelperObject_t811D12CA4ECDC868E53C383130E35DA936056627_m5E0B51D6FAD3210C75AD4063320A37C8EDAB02EA (GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * __this, const RuntimeMethod* method)
 {
@@ -26179,6 +26191,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameDataSO_GetSoundState_mFA76B6BEF78416
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Graphic_tF07D777035055CF93BA5F46F77ED5EDFEFF9AE24 * Selectable_get_targetGraphic_mF2D1BFB9DE33BAB553933533CC4A9135A37F4A72_inline (Selectable_t34088A3677CC9D344F81B0D91999D8C5963D7DBD * __this, const RuntimeMethod* method);
 // System.Boolean GameDataSO::GetMusicState()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameDataSO_GetMusicState_mFC1A08A60CD6A810574CA20D75DB2ED6F338636E (GameDataSO_tE8F2AF002E952122F3F1B4D5027E5A3E70EDB57F * __this, const RuntimeMethod* method);
+// System.Void PlayGamesController::ShowLeaderboardUI()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayGamesController_ShowLeaderboardUI_m9F220027F586C8E48B996F98F86AC26F15F6A75C (const RuntimeMethod* method);
 // UnityEngine.Color UnityEngine.Color::get_white()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  Color_get_white_mB21E47D20959C3AEC41AF8BA04F63AC89FAF319E (const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,GooglePlayGames.BasicApi.SignInStatus>::.ctor()
@@ -28504,6 +28518,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Event_get_Visibility_mA3257CD915C347A
 		return L_0;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -33371,6 +33393,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayGamesController_ShowLeaderboardUI_m9
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ILocalUser_t835F1CCDE2ED60F6D514522949B6402B7D871F27_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PlayGamesPlatform_t37CF2DD1D3AE9874E13AF34B1DFC4429A7BD975F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral30CC41AF1B42DB6D883BC74C6F39AEC16E8649E4);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -33380,6 +33404,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayGamesController_ShowLeaderboardUI_m9
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean UnityEngine.SocialPlatforms.ILocalUser::get_authenticated() */, ILocalUser_t835F1CCDE2ED60F6D514522949B6402B7D871F27_il2cpp_TypeInfo_var, L_0);
+		if (!L_1)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		// PlayGamesPlatform.Instance.ShowLeaderboardUI(GPGSIds.leaderboard_high_score);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayGamesPlatform_t37CF2DD1D3AE9874E13AF34B1DFC4429A7BD975F_il2cpp_TypeInfo_var);
+		PlayGamesPlatform_t37CF2DD1D3AE9874E13AF34B1DFC4429A7BD975F * L_2;
+		L_2 = PlayGamesPlatform_get_Instance_mE45392ADA3D47DA46CBB4B8C85BE43DC52AF1F56(/*hidden argument*/NULL);
+		NullCheck(L_2);
+		PlayGamesPlatform_ShowLeaderboardUI_mA56C388685807248A823B6DA5221E947AFE75EFE(L_2, _stringLiteral30CC41AF1B42DB6D883BC74C6F39AEC16E8649E4, /*hidden argument*/NULL);
+	}
+
+IL_001b:
+	{
 		// }
 		return;
 	}
@@ -42943,6 +42983,16 @@ IL_005f:
 		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_15 = __this->get_offColor_6();
 		NullCheck(L_14);
 		VirtActionInvoker1< Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_14, L_15);
+		// }
+		return;
+	}
+}
+// System.Void SettingsManager::OpenLeaderBoard()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingsManager_OpenLeaderBoard_m02F886F396E29FAEF2C2D9A93DD4707D70381253 (SettingsManager_t44B5E1DC5CA800FAB0D8E6D7903762A3BE0C5439 * __this, const RuntimeMethod* method)
+{
+	{
+		// PlayGamesController.ShowLeaderboardUI();
+		PlayGamesController_ShowLeaderboardUI_m9F220027F586C8E48B996F98F86AC26F15F6A75C(/*hidden argument*/NULL);
 		// }
 		return;
 	}
