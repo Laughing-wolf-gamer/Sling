@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "384521320879",
+    "project_id": "sling-9a6a1",
+    "storage_bucket": "sling-9a6a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384521320879:android:d93d888dc5f8a6f997175a",
+        "android_client_info": {
+          "package_name": "com.PlayResume.Sling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384521320879-pdlcrd20bav7tonc2pvahsohpb4s5mcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnKnXZVMkvtFyiiNwSK6Xq3qAmoSzf7KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384521320879-pdlcrd20bav7tonc2pvahsohpb4s5mcj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

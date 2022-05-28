@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aec672c00c62c46b7dca04904ff39b, type: 3}
+  m_Name: Defult
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 21300000, guid: 5405364029adb7f40926d08473d854b8, type: 3}
+  prefab: {fileID: 1641137343780181334, guid: 141665910d666a646b54edba1ac547ec, type: 3}
+  unloackRecipies: Purchased
+  saveData:
+    unlocked: 1
+    isUsing: 1
