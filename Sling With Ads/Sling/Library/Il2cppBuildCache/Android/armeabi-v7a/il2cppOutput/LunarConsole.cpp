@@ -16452,7 +16452,7 @@ IL_0019:
 			L_11 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_10, /*hidden argument*/NULL);
 			NullCheck(L_9);
 			bool L_12;
-			L_12 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_9, L_11);
+			L_12 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_9, L_11);
 			if (L_12)
 			{
 				goto IL_004e;
@@ -16471,7 +16471,7 @@ IL_0034:
 			L_16 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_15, /*hidden argument*/NULL);
 			NullCheck(L_14);
 			bool L_17;
-			L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(106 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_14, L_16);
+			L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_14, L_16);
 			if (!L_17)
 			{
 				goto IL_00d9;
@@ -20421,7 +20421,7 @@ IL_00d3:
 			L_42 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_41, /*hidden argument*/NULL);
 			NullCheck(L_40);
 			bool L_43;
-			L_43 = VirtFuncInvoker1< bool, Type_t * >::Invoke(106 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_40, L_42);
+			L_43 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_40, L_42);
 			if (!L_43)
 			{
 				goto IL_00ea;
@@ -20666,7 +20666,7 @@ IL_0057:
 		L_25 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_24, /*hidden argument*/NULL);
 		NullCheck(L_23);
 		bool L_26;
-		L_26 = VirtFuncInvoker1< bool, Type_t * >::Invoke(106 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_23, L_25);
+		L_26 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_23, L_25);
 		if (L_26)
 		{
 			goto IL_0088;
@@ -28778,7 +28778,7 @@ IL_0039:
 		Type_t * L_22 = __this->get_paramType_1();
 		NullCheck(L_21);
 		bool L_23;
-		L_23 = VirtFuncInvoker1< bool, Type_t * >::Invoke(106 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_21, L_22);
+		L_23 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_21, L_22);
 		return L_23;
 	}
 

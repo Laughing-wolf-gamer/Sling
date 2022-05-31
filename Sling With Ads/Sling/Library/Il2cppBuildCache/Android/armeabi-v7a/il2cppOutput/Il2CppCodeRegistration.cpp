@@ -31,6 +31,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Google_Play_Review_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_LunarConsole_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_MaxSdk_Scripts_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Purchasing_Common_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Configuration_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Core_CodeGenModule;
@@ -52,6 +53,16 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_Code
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_ParticleSystemModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_AppleCore_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_AppleMacosStub_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_AppleStub_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_Codeless_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_SecurityCore_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_Security_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_Stores_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_WinRTCore_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Purchasing_WinRTStub_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_ScreenCaptureModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_SharedInternalsModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_SpriteShapeModule_CodeGenModule;
@@ -75,7 +86,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_RenderPipelines_Universal_Runt
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_TextMeshPro_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[56] = 
+const Il2CppCodeGenModule* g_CodeGenModules[67] = 
 {
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_DOTweenPro_CodeGenModule),
@@ -90,6 +101,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[56] =
 	(&g_LunarConsole_CodeGenModule),
 	(&g_MaxSdk_Scripts_CodeGenModule),
 	(&g_Mono_Security_CodeGenModule),
+	(&g_Purchasing_Common_CodeGenModule),
 	(&g_System_CodeGenModule),
 	(&g_System_Configuration_CodeGenModule),
 	(&g_System_Core_CodeGenModule),
@@ -111,6 +123,16 @@ const Il2CppCodeGenModule* g_CodeGenModules[56] =
 	(&g_UnityEngine_ParticleSystemModule_CodeGenModule),
 	(&g_UnityEngine_Physics2DModule_CodeGenModule),
 	(&g_UnityEngine_PhysicsModule_CodeGenModule),
+	(&g_UnityEngine_Purchasing_AppleCore_CodeGenModule),
+	(&g_UnityEngine_Purchasing_AppleMacosStub_CodeGenModule),
+	(&g_UnityEngine_Purchasing_AppleStub_CodeGenModule),
+	(&g_UnityEngine_Purchasing_CodeGenModule),
+	(&g_UnityEngine_Purchasing_Codeless_CodeGenModule),
+	(&g_UnityEngine_Purchasing_SecurityCore_CodeGenModule),
+	(&g_UnityEngine_Purchasing_Security_CodeGenModule),
+	(&g_UnityEngine_Purchasing_Stores_CodeGenModule),
+	(&g_UnityEngine_Purchasing_WinRTCore_CodeGenModule),
+	(&g_UnityEngine_Purchasing_WinRTStub_CodeGenModule),
 	(&g_UnityEngine_ScreenCaptureModule_CodeGenModule),
 	(&g_UnityEngine_SharedInternalsModule_CodeGenModule),
 	(&g_UnityEngine_SpriteShapeModule_CodeGenModule),
@@ -137,20 +159,20 @@ const Il2CppCodeGenModule* g_CodeGenModules[56] =
 IL2CPP_EXTERN_C const Il2CppCodeRegistration g_CodeRegistration;
 const Il2CppCodeRegistration g_CodeRegistration = 
 {
-	50,
+	51,
 	g_ReversePInvokeWrapperPointers,
-	15427,
+	16202,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	4437,
+	4545,
 	g_Il2CppInvokerPointers,
-	605,
+	643,
 	g_UnresolvedVirtualMethodPointers,
-	288,
+	295,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	56,
+	67,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

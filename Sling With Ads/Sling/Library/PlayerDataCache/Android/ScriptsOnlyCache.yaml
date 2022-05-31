@@ -42,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -729,7 +730,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 38514a6695053ce0de2ad23d54c94e5a
+      Hash: b511dfc0004f4260b70e545aa73ea1f4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1812,4 +1813,4 @@ ScriptsOnlyBuild:
   - Assets/_Assets/_Scenes/GPGS Auth.unity
   - Assets/_Assets/_Scenes/Loading Screen.unity
   - Assets/_Assets/_Scenes/Game Scene.unity
-  playerPath: D:/Unity Builds/Sling/Sling_T 22.apk
+  playerPath: D:/Unity Builds/Sling/AAB Builds/Sling Update 3.aab

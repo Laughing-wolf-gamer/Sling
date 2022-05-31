@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour {
 
 
     [Header("Power Up")]
+    [SerializeField] private Color spikePowerUpColor;
+    [SerializeField] private Color healthPowerUpColor,sheildPowerUpColor,highJumpColor,normalColor;
+    [SerializeField] private Camera m_cam;
     [SerializeField] private float maxHealingTime;
     [SerializeField] private float maxSheildActiveTime;
     
@@ -163,6 +166,7 @@ public class PlayerMovement : MonoBehaviour {
     public void UseHealPowerUp(){
         powerUpCollectedAmount++;
         // Healing 
+        m_cam.backgroundColor = healthPowerUpColor;
         AudioManager.current.PlayOneShotMusic(SoundType.PowerUp);
         canHeal = true;
         if(canHeal){
@@ -171,11 +175,13 @@ public class PlayerMovement : MonoBehaviour {
     }
     private IEnumerator HealPowerUpRoutine(){
         yield return new WaitForSeconds(maxHealingTime);
+        m_cam.backgroundColor = normalColor;
         canHeal = false;
     }
     public void UseSheildPowerUp(){
         powerUpCollectedAmount ++;
         // Make a sheild around the player
+        m_cam.backgroundColor = sheildPowerUpColor;
         AudioManager.current.PlayOneShotMusic(SoundType.PowerUp);
         canSheild = true;
         canHeal = false;
@@ -189,17 +195,30 @@ public class PlayerMovement : MonoBehaviour {
     private IEnumerator SheildPowerUpRoutine(){
         yield return new WaitForSeconds(maxSheildActiveTime);
         canSheild = false;
+        m_cam.backgroundColor = normalColor;
         shieldPowerUpObject.SetActive(canSheild);
     }
     public void UseExtraJump(){
         powerUpCollectedAmount++;
+        m_cam.backgroundColor = highJumpColor;
         AudioManager.current.PlayOneShotMusic(SoundType.LongJump);
         rb2D.AddForce(transform.up * upForce * 2,ForceMode2D.Impulse);
+        StartCoroutine(ExtraJumpPowerUpRoutine());
+    }
+    private IEnumerator ExtraJumpPowerUpRoutine(){
+        yield return new WaitForSeconds(1.5f);
+        m_cam.backgroundColor = normalColor;
     }
     public void AttackSpikePowerUp(){
+        m_cam.backgroundColor = spikePowerUpColor;
+        StartCoroutine(SpikeUpRoutine());
         AudioManager.current.PlayOneShotMusic(SoundType.PowerUp);
         // attack with white spikes which kills the dark obstacles.
         SpawnSpike(5,PoolObjectTag.PowerUps_WhiteSpike);
+    }
+    private IEnumerator SpikeUpRoutine(){
+        yield return new WaitForSeconds(1.5f);
+        m_cam.backgroundColor = normalColor;
     }
     public void SpawnSpike(int currentSpawnAmount,PoolObjectTag tag){
         

@@ -72,25 +72,25 @@ static Il2CppMethodPointer s_methodPointers[19] =
 };
 static const int32_t s_InvokerIndices[19] = 
 {
-	2216,
-	2588,
-	2656,
-	2588,
-	1984,
-	2588,
-	1984,
-	2656,
-	2216,
-	1347,
-	2656,
-	2216,
-	1347,
+	2271,
+	2649,
+	2718,
+	2649,
+	2032,
+	2649,
+	2032,
+	2718,
+	2271,
+	1388,
+	2718,
+	2271,
+	1388,
 	-1,
 	-1,
-	2656,
-	2588,
-	1984,
-	2656,
+	2718,
+	2649,
+	2032,
+	2718,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {
@@ -98,11 +98,11 @@ static const Il2CppTokenRangePair s_rgctxIndices[1] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[5] = 
 {
-	{ (Il2CppRGCTXDataType)3, 12027 },
-	{ (Il2CppRGCTXDataType)3, 12026 },
-	{ (Il2CppRGCTXDataType)3, 11994 },
-	{ (Il2CppRGCTXDataType)2, 3073 },
-	{ (Il2CppRGCTXDataType)2, 3076 },
+	{ (Il2CppRGCTXDataType)3, 12689 },
+	{ (Il2CppRGCTXDataType)3, 12688 },
+	{ (Il2CppRGCTXDataType)3, 12656 },
+	{ (Il2CppRGCTXDataType)2, 3346 },
+	{ (Il2CppRGCTXDataType)2, 3349 },
 };
 extern const CustomAttributesCacheGenerator g_Google_Play_Review_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Google_Play_Review_CodeGenModule;
