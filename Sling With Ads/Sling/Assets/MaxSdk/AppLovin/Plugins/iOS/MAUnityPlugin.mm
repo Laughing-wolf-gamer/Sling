@@ -744,6 +744,11 @@ extern "C"
     {
         return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
     }
+
+    bool _MaxIsPhysicalDevice()
+    {
+        return !ALUtils.simulator;
+    }
     
     static const char * cStringCopy(NSString *string)
     {

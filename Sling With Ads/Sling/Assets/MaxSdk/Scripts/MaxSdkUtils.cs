@@ -306,6 +306,27 @@ public class MaxSdkUtils
         return false;
 #endif
     }
+    
+#if UNITY_IOS
+    [DllImport("__Internal")]
+    private static extern bool _MaxIsPhysicalDevice();
+#endif
+
+    /// <summary>
+    /// Returns whether or not a physical device is being used, as opposed to an emulator / simulator.
+    /// </summary>
+    public static bool IsPhysicalDevice()
+    {
+#if UNITY_EDITOR
+        return false;
+#elif UNITY_IOS
+        return _MaxIsPhysicalDevice();
+#elif UNITY_ANDROID
+        return MaxUnityPluginClass.CallStatic<bool>("isPhysicalDevice");
+#else
+        return false;
+#endif
+    }
 
 #if UNITY_IOS
     [DllImport("__Internal")]
