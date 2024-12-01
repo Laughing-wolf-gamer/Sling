@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour {
                 }
             }
 
-            rb2D.drag = currentDrag;
+            rb2D.linearDamping = currentDrag;
         }else{
             body.SetActiveGravity(false);
         }
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour {
                 igonrCollsion = true;
                 body.transform.parent.gameObject.SetActive(false);
                 currentDrag = normalDrag;
-                rb2D.velocity = Vector2.zero;
+                rb2D.linearVelocity = Vector2.zero;
                 rb2D.AddForce(transform.up * upForce,ForceMode2D.Impulse);
                 GameHandler.current.IncresaseScore();
                 Invoke(nameof(ResetCollison),0.1f);
