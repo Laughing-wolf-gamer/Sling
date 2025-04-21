@@ -36,6 +36,5 @@ public class SettingsManager : MonoBehaviour {
         }
     }
     public void OpenLeaderBoard(){
-        PlayGamesController.ShowLeaderboardUI();
     }
 }
