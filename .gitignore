@@ -1,49 +1,119 @@
-# Unity generated files
-# .vs, .idea, .suo, .user, .userprefs, .db, .log
-.vscode/
-.idea/
-.vs/
-[Ll]ibrary/
+# ============================
+# Unity Generated Files
+# ============================
 [Ll]ibrary/
 [Tt]emp/
-[Tt]emp/
-.obj/
-.obj/
-[Bb]in/
-[Bb]in/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
 [Ll]ogs/
-[Ll]ogs/
+[Mm]emoryCaptures/
 
-# User-specific files
+# ============================
+# IDE & Editor Settings (VS, JetBrains Rider, VSCode)
+# ============================
+.vs/
+.idea/
+.vscode/
+.vscode/**
+
+*.csproj
+*.unityproj
+*.sln
+*.sln.iml
+*.suo
 *.user
 *.userprefs
-*.suo
-*.userosscache
-*.sln
+*.booproj
+*.pidb
+*.pidb.meta
+*.svd
+
+# ============================
+# Unity Cache / Temporary / Backup Files
+# ============================
+*.stackdump
+*.bak
+*.old
+*.orig
 *.swp
-*~.nib
-*.apk
-*.aab
-*.ipa
-*.xcodeproj
-*.xcworkspace
-*.xcuserdata
-.idea/
-.vscode/
+*.swo
+*.tmp
+*.prefs
 
-# Unity3D generated meta files
-# They should not be ignored because Unity uses them to track project settings and assets.
-!*.meta
+# ============================
+# OS Generated Files
+# ============================
+.DS_Store
+Thumbs.db
 
-# Firebase specific files (if any)
-# Firebase configurations and generated files
-# Depending on your setup, Firebase may generate a "google-services.json" (Android) or "GoogleService-Info.plist" (iOS), which should be added to version control as they are essential for the configuration of Firebase services.
-# However, ignore other generated Firebase files like:
+# ============================
+# Firebase Specific
+# ============================
+firebase.json
+.firebaserc
 firebase-debug.log
-firebase-config.json
-google-services.json
-GoogleService-Info.plist
+.firebase/
 
-# Build folders or output from Firebase
-# If Firebase-related builds or generated files are placed here:
-Firebase/
+# ============================
+# Crashlytics & Analytics (if integrated)
+# ============================
+crashlytics-build.properties
+
+# ============================
+# Android & Gradle Build Files
+# ============================
+.gradle/
+**/build/
+**/intermediates/
+**/generated/
+*.apk
+*.aar
+
+# ============================
+# Unity Cloud Build
+# ============================
+.cloudbuild/
+
+# ============================
+# Asset Store Tools
+# ============================
+Assets/AssetStoreTools*
+
+# ============================
+# Large Binary / Asset Files
+# ============================
+*.mp4
+*.mov
+*.avi
+*.flv
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.iso
+*.exe
+*.bundle
+
+# ============================
+# Logs and Reports
+# ============================
+*.log
+*.report
+*.tlog
+
+# ============================
+# Node.js (for Firebase CLI)
+# ============================
+node_modules/
+
+# ============================
+# Optional Unity Features
+# ============================
+
+# Uncomment if using Addressables
+# Library/com.unity.addressables/
+
+# Uncomment if using Collaborate (Unity Teams)
+# Collab/
