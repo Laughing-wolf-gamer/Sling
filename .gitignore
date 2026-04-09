@@ -14,8 +14,6 @@
 # ============================
 .vs/
 .idea/
-.vscode/
-.vscode/**
 
 *.csproj
 *.unityproj
@@ -117,3 +115,4 @@ node_modules/
 
 # Uncomment if using Collaborate (Unity Teams)
 # Collab/
+config.bat

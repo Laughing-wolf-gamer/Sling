@@ -23,7 +23,7 @@ public class GravityAttractor : MonoBehaviour {
         Vector3 bodyUp = _body.up;
         _body.rotation = Quaternion.FromToRotation(bodyUp,dir) * _body.rotation;
         Debug.DrawRay(_body.position,dir,Color.red,100f);
-        if(_body.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb)){
+        if(_body.TryGetComponent(out Rigidbody2D rb)){
             rb.AddForce(dir * gravity,ForceMode2D.Force);
         }
     }
